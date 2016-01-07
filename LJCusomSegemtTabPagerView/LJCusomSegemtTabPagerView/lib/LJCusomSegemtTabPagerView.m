@@ -190,7 +190,7 @@
 
 - (void)setupContentView {
     
-    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, _titlesView.frame.origin.y+_cellHeight +_viewMarginHeight + _viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
+    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, _titlesView.frame.origin.y+_cellHeight +_viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
     _contentView.delegate = self ;
     _contentView.backgroundColor = [UIColor whiteColor];
     _contentView.pagingEnabled = YES;

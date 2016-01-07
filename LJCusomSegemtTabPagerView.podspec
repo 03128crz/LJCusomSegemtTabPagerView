@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LJCusomSegemtTabPagerView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "simple segment tab pager view"
 
   # This description is used to generate tags and improve search results.
