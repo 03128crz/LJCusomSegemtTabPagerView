@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "7.0"
 
   s.source       = { :git => "https://github.com/03128crz/LJCusomSegemtTabPagerView.git", :tag => "1.0.1" }
-  s.source_files  = "LJCusomSegemtTabPagerView", "LJCusomSegemtTabPagerView/LJCusomSegemtTabPagerView/lib/**/*.{h,m,xib}"
+  s.source_files  = "LJCusomSegemtTabPagerView", "LJCusomSegemtTabPagerView/LJCusomSegemtTabPagerView/lib/**/*.{h,m}"
   s.exclude_files = "LJCusomSegemtTabPagerView/Exclude"
   s.resources = ["LJCusomSegemtTabPagerView/LJCusomSegemtTabPagerView/lib/**/*.{xib}"]
 
