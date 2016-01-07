@@ -14,7 +14,7 @@ just drag the 'LJCusomSegemtTabPagerView' document to your project.
 
 * Cocoapods:
 
-//pod 'LJCusomSegemtTabPagerView', :git => 'https://github.com/03128crz/LJCusomSegemtTabPagerView.git'
+pod 'LJCusomSegemtTabPagerView', :git => 'https://github.com/03128crz/LJCusomSegemtTabPagerView.git'
 
 # Supplement
 
