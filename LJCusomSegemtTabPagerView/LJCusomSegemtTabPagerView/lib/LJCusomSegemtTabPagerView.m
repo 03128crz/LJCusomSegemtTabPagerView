@@ -31,7 +31,7 @@
     if (self) {
         _cellHeight = 36;
         _fontSize = 15;
-        _viewMarginHeight = 10;
+        _viewMarginHeight = 0;
         _titlePadding = 14;
         _indicaterViewColor = [UIColor blueColor];
         _titleColor = [UIColor blackColor];
@@ -190,7 +190,7 @@
 
 - (void)setupContentView {
     
-    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, _titlesView.frame.size.height + _viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
+    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, _titlesView.frame.origin.y+_cellHeight +_viewMarginHeight + _viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
     _contentView.delegate = self ;
     _contentView.backgroundColor = [UIColor whiteColor];
     _contentView.pagingEnabled = YES;
