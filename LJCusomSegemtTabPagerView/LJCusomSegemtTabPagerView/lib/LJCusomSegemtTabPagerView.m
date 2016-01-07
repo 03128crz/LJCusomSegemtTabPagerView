@@ -178,7 +178,7 @@
     flowFayout.minimumInteritemSpacing = 0;
     flowFayout.minimumLineSpacing = 0;
     
-    _titlesView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width , _cellHeight) collectionViewLayout:flowFayout];
+    _titlesView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x, 0, self.frame.size.width , _cellHeight) collectionViewLayout:flowFayout];
     _titlesView.backgroundColor = [UIColor whiteColor];
     _titlesView.delegate = self;
     _titlesView.dataSource = self;
@@ -190,7 +190,7 @@
 
 - (void)setupContentView {
     
-    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, _titlesView.frame.origin.y+_cellHeight +_viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
+    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x,_cellHeight +_viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
     _contentView.delegate = self ;
     _contentView.backgroundColor = [UIColor whiteColor];
     _contentView.pagingEnabled = YES;

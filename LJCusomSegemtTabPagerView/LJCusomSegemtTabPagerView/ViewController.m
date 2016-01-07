@@ -24,7 +24,7 @@
     _dataList = @[@"推荐", @"大数据", @"跨境电商", @"移动电商", @"双二十测试", @"互联网", @"O2O", @"行家面对面", @"同学会"];
     
     CGRect frame = self.view.frame;
-    frame.origin.y = 30;
+    frame.origin.y = 10;
     
     _segmentTabPagerView = [[LJCusomSegemtTabPagerView alloc] initWithFrame:frame];
     _segmentTabPagerView.titles = _dataList;
