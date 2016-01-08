@@ -76,7 +76,7 @@
     
     LJCusomSegemtTabPagerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJCusomSegemtTabPagerCell" forIndexPath:indexPath];
     cell.titleLabel.text = _titles[indexPath.row];
-    
+    cell.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
     if (indexPath == _selectedItemIndexPath) {
         cell.titleLabel.textColor = _titleHighlightColor;
     }else {
