@@ -292,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LJCusomSegemtTabPagerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.da-mai.LJCusomSegemtTabPagerView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LJCusomSegemtTabPagerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.da-mai.LJCusomSegemtTabPagerView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,6 +330,7 @@
 				ACC9CE271C3D0D010045CBA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

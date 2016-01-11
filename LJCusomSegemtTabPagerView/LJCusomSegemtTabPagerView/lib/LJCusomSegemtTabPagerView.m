@@ -171,6 +171,9 @@
 
 #pragma mark - private method
 - (void)setupTitlesView {
+    if (_titlesView) {
+        return;
+    }
     
     UICollectionViewFlowLayout *flowFayout = [[UICollectionViewFlowLayout alloc] init];
     flowFayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -189,6 +192,10 @@
 
 - (void)setupContentView {
     
+    if (_contentView) {
+        return;
+    }
+    
     _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x,_cellHeight +_viewMarginHeight, self.frame.size.width, self.frame.size.height-_cellHeight-_viewMarginHeight)];
     _contentView.delegate = self ;
     _contentView.backgroundColor = [UIColor whiteColor];
@@ -203,11 +210,14 @@
 
 -(void)setupIndicateView {
     
-    if (_indicaterView == nil) {
-        _indicaterView = [[UIView alloc] initWithFrame:CGRectMake(0, _cellHeight - 2.0, 10, 2.0)];
-        _indicaterView.backgroundColor = _indicaterViewColor;
-        [self.titlesView addSubview:_indicaterView];
+    if (_indicaterView) {
+        return;
     }
+    
+    _indicaterView = [[UIView alloc] initWithFrame:CGRectMake(0, _cellHeight - 2.0, 10, 2.0)];
+    _indicaterView.backgroundColor = _indicaterViewColor;
+    [self.titlesView addSubview:_indicaterView];
+    
     
 }
 
