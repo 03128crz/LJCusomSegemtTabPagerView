@@ -139,8 +139,8 @@
     
     [_selectedTitles addObject:_titles[index]];
     
-    if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:)]) {
-        [self.delegate pagerContentView:_contentView didSelectTitle:_titles[index]];
+    if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:didSelectedIndex:)]) {
+        [self.delegate pagerContentView:_contentView didSelectTitle:_titles[index] didSelectedIndex:(NSInteger)index];
     }
     
 }

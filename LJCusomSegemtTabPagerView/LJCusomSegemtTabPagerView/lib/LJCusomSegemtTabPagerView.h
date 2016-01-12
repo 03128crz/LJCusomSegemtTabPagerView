@@ -13,7 +13,7 @@ typedef void(^DefaultVCBlock) (UIView *contentView ,NSString *title);
 @protocol LJCusomSegemtTabPagerViewDelegate <NSObject>
 
 @required
-- (void)pagerContentView:(UIView *)view didSelectTitle:(NSString *)title ;
+- (void)pagerContentView:(UIView *)view didSelectTitle:(NSString *)title didSelectedIndex:(NSInteger)index;
 
 @end
 
