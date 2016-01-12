@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^DefaultVCBlock) (UIView *contentView ,NSString *title);
+typedef void(^DefaultVCBlock) (UIView *contentView ,NSString *title,NSInteger index);
 
 @protocol LJCusomSegemtTabPagerViewDelegate <NSObject>
 
