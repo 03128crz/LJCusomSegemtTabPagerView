@@ -54,7 +54,7 @@
         NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
         [self collectionView:_titlesView didSelectItemAtIndexPath:path];
         if (_block) {
-            _block(_contentView, _titles[0]);
+            _block(_contentView, _titles[0], 1);
         }
     }
     
