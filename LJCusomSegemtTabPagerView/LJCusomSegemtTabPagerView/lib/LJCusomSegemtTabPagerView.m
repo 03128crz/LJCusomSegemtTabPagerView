@@ -204,12 +204,14 @@
     //全部view的数据加载完毕后自动移到第一个
     [_titlesView reloadData];
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        NSInteger initIndex = 0 ;
+        NSIndexPath *path = [NSIndexPath indexPathForRow:initIndex inSection:0];
         
         [self collectionView:_titlesView didSelectItemAtIndexPath:path];
         
         if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:didSelectedIndex:)]) {
-            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[0] didSelectedIndex:0];
+            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[initIndex] didSelectedIndex:initIndex];
+            [_selectedTitles addObject:_titles[initIndex]];
         }
     });
     
