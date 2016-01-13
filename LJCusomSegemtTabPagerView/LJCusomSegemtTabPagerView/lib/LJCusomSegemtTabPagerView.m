@@ -209,7 +209,7 @@
         [self collectionView:_titlesView didSelectItemAtIndexPath:path];
         
         if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:didSelectedIndex:)]) {
-            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[0] didSelectedIndex:(NSInteger)index];
+            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[0] didSelectedIndex:0];
         }
     });
     
