@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^DefaultVCBlock) (UIView *contentView ,NSString *title,NSInteger index);
-
 @protocol LJCusomSegemtTabPagerViewDelegate <NSObject>
 
 @required
@@ -36,9 +34,5 @@ typedef void(^DefaultVCBlock) (UIView *contentView ,NSString *title,NSInteger in
 @property (nonatomic, strong) id<LJCusomSegemtTabPagerViewDelegate> delegate;
 
 - (instancetype)initWithFrame: (CGRect)frame;
-
-// ViewDidAppear中依次调用以下两个方法
-- (void) addDefaultVCWithBlock: (DefaultVCBlock) block;
-- (void)defaultTitleClick;
 
 @end

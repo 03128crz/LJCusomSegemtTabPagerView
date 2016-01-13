@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSIndexPath *selectedItemIndexPath;
 @property (nonatomic, strong) UIView *indicaterView;
 @property (nonatomic, strong) NSMutableSet *selectedTitles;
-@property (nonatomic, strong) DefaultVCBlock block;
+//@property (nonatomic, strong) DefaultVCBlock block;
 
 @end
 
@@ -47,23 +47,7 @@
     [self setupTitlesView];
     [self setupContentView];
     [self setupIndicateView];
-}
 
-- (void)defaultTitleClick {
-    if (_selectedTitles.count == 0 ) {
-        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self collectionView:_titlesView didSelectItemAtIndexPath:path];
-        if (_block) {
-            _block(_contentView, _titles[0], 1);
-        }
-    }
-    
-}
-
-- (void) addDefaultVCWithBlock: (DefaultVCBlock) block {
-    if (_block == nil && block != nil) {
-        _block = block;
-    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -213,11 +197,21 @@
     if (_indicaterView) {
         return;
     }
-    
     _indicaterView = [[UIView alloc] initWithFrame:CGRectMake(0, _cellHeight - 2.0, 10, 2.0)];
     _indicaterView.backgroundColor = _indicaterViewColor;
     [self.titlesView addSubview:_indicaterView];
     
+    //全部view的数据加载完毕后自动移到第一个
+    [_titlesView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        [self collectionView:_titlesView didSelectItemAtIndexPath:path];
+        
+        if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:didSelectedIndex:)]) {
+            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[0] didSelectedIndex:(NSInteger)index];
+        }
+    });
     
 }
 

@@ -37,25 +37,13 @@
 
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    __weak typeof(self) weakSelf = self;
-    [_segmentTabPagerView addDefaultVCWithBlock:^(UIView *contentView, NSString *title) {
-        DetailViewController *vc = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
-        vc.view.frame = contentView.bounds;
-        vc.channelTitle = title;
-        [contentView addSubview:vc.view];
-        [weakSelf addChildViewController:vc];
-    }];
-    [_segmentTabPagerView defaultTitleClick];
-}
-
--(void)pagerContentView:(UIView *)view didSelectTitle:(NSString *)title {
+-(void)pagerContentView:(UIView *)view didSelectTitle:(NSString *)title didSelectedIndex:(NSInteger)index {
     DetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
     vc.view.frame = view.bounds;
     vc.channelTitle = title;
     [view addSubview:vc.view];
     [self addChildViewController:vc];
 }
+
 
 @end
