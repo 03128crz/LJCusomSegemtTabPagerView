@@ -33,9 +33,9 @@
         _fontSize = 15;
         _viewMarginHeight = 10;
         _titlePadding = 14;
-        _indicaterViewColor = [UIColor colorWithRed:62 green:130 blue:255 alpha:1];
-        _titleColor = [UIColor colorWithRed:102 green:103 blue:103 alpha:1];
-        _titleHighlightColor = [UIColor colorWithRed:3 green:89 blue:252 alpha:1];
+        _indicaterViewColor = [UIColor colorWithRed:62/255.0 green:130/255.0 blue:255/255.0 alpha:1];
+        _titleColor = [UIColor colorWithRed:102/255.0 green:103/255.0 blue:103/255.0 alpha:1];
+        _titleHighlightColor = [UIColor colorWithRed:3/255.0 green:89/255.0 blue:252/255.0 alpha:1];
         _indicaterSameWidthWithTitle = YES;
     }
     
