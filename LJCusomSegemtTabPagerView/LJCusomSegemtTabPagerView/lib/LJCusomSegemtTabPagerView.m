@@ -31,11 +31,11 @@
     if (self) {
         _cellHeight = 36;
         _fontSize = 15;
-        _viewMarginHeight = 10;
+        _viewMarginHeight = 0;
         _titlePadding = 14;
-        _indicaterViewColor = [UIColor colorWithRed:62 green:130 blue:255 alpha:1];
-        _titleColor = [UIColor colorWithRed:102 green:103 blue:103 alpha:1];
-        _titleHighlightColor = [UIColor colorWithRed:3 green:89 blue:252 alpha:1];
+        _indicaterViewColor = [UIColor blueColor];
+        _titleColor = [UIColor blackColor];
+        _titleHighlightColor = [UIColor blueColor];
         _indicaterSameWidthWithTitle = YES;
     }
     
@@ -204,14 +204,16 @@
     //全部view的数据加载完毕后自动移到第一个
     [_titlesView reloadData];
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSInteger initIndex = 0 ;
-        NSIndexPath *path = [NSIndexPath indexPathForRow:initIndex inSection:0];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
         
         [self collectionView:_titlesView didSelectItemAtIndexPath:path];
         
         if ([self.delegate respondsToSelector:@selector(pagerContentView:didSelectTitle:didSelectedIndex:)]) {
-            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[initIndex] didSelectedIndex:initIndex];
-            [_selectedTitles addObject:_titles[initIndex]];
+
+            
+            
+            [self.delegate pagerContentView:_contentView didSelectTitle:_titles[0] didSelectedIndex:0];
+
         }
     });
     
