@@ -31,11 +31,11 @@
     if (self) {
         _cellHeight = 36;
         _fontSize = 15;
-        _viewMarginHeight = 0;
+        _viewMarginHeight = 10;
         _titlePadding = 14;
-        _indicaterViewColor = [UIColor blueColor];
-        _titleColor = [UIColor blackColor];
-        _titleHighlightColor = [UIColor blueColor];
+        _indicaterViewColor = [UIColor colorWithRed:62 green:130 blue:255 alpha:1];
+        _titleColor = [UIColor colorWithRed:102 green:103 blue:103 alpha:1];
+        _titleHighlightColor = [UIColor colorWithRed:3 green:89 blue:252 alpha:1];
         _indicaterSameWidthWithTitle = YES;
     }
     
